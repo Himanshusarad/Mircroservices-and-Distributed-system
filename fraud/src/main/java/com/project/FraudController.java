@@ -1,5 +1,6 @@
 package com.project;
 
+import com.project.clients.fraud.FraudCheckResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -11,12 +12,8 @@ import org.springframework.web.bind.annotation.*;
 public class FraudController {
 
     private final FraudCheckService fraudCheckService;
-//  Not required
-//    public FraudController(FraudCheckService fraudCheckService) {
-//        this.fraudCheckService  = fraudCheckService;
-//    }
 
-    @GetMapping (path = "{customerId}")
+    @GetMapping(path = "{customerId}")
     public FraudCheckResponse isFraudster(
             @PathVariable("customerId") Integer customerId
     ) {
