@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 public class NotificationService {
     private final NotificationRepository notificationRepository;
     public void createNotification(NotificationRequest notificationRequest) {
+        // notification request here for git
         Notification notification = Notification.builder().toCustomerId(notificationRequest.toCustomerId())
                 .toCustomerEmail(notificationRequest.toCustomerName())
                 .sender("Himanshu")
